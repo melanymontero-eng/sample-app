@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-east1-docker.pkg.dev/$qwiklabs-gcp-01-7890e81814a4/my-repository/hello-app:v1.0', '.' ]
+  args: [ 'build', '-t', 'us-east1-docker.pkg.dev/qwiklabs-gcp-01-7890e81814a4/my-repository/hello-app:v1.0', '.' ]
 - name: 'gcr.io/cloud-builders/gcloud'
   args: [ 'container', 'clusters', 'get-credentials', 'hello-cluster', '--zone', 'us-east1-d' ]
 - name: 'gcr.io/cloud-builders/kubectl'
   args: [ 'apply', '-f', 'prod/' ]
 images:
-- 'us-east1-docker.pkg.dev/$qwiklabs-gcp-01-7890e81814a4/my-repository/hello-app:v1.0'
+- 'us-east1-docker.pkg.dev/qwiklabs-gcp-01-7890e81814a4/my-repository/hello-app:v1.0'
