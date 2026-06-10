@@ -7,3 +7,5 @@ steps:
   args: [ 'apply', '-f', 'prod/' ]
 images:
 - 'us-east1-docker.pkg.dev/qwiklabs-gcp-01-7890e81814a4/my-repository/hello-app:v1.0'
+options:
+  logging: CLOUD_LOGGING_ONLY
