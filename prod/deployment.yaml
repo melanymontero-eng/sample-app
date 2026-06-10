@@ -19,4 +19,3 @@ spec:
         image: us-east1-docker.pkg.dev/qwiklabs-gcp-01-7890e81814a4/my-repository/hello-app:v1.0
         ports:
         - containerPort: 8080
-# force rebuild 1781132824
